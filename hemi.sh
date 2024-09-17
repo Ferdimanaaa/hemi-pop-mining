@@ -78,13 +78,13 @@ if [ "$choice" == "1" ]; then
             export POPM_STATIC_FEE="$static_fee"
             export POPM_BFG_URL="wss://testnet.rpc.hemi.network/v1/ws/public"
             
-            screen -dmS airdropnode ./popmd
+            screen -dmS mgsky ./popmd
             if [ $? -ne 0 ]; then
                 show "Failed to start PoP mining in screen session."
                 exit 1
             fi
 
-            show "PoP mining has started in the detached screen session named 'airdropnode'."
+            show "PoP mining has started in the detached screen session named 'mgsky'."
         fi
     fi
 
@@ -96,13 +96,13 @@ elif [ "$choice" == "2" ]; then
     export POPM_STATIC_FEE="$static_fee"
     export POPM_BFG_URL="wss://testnet.rpc.hemi.network/v1/ws/public"
     
-    screen -dmS airdropnode ./popmd
+    screen -dmS mgsky ./popmd
     if [ $? -ne 0 ]; then
         show "Failed to start PoP mining in screen session."
         exit 1
     fi
 
-    show "PoP mining has started in the detached screen session named 'airdropnode'."
+    show "PoP mining has started in the detached screen session named 'mgsky'."
 else
     show "Invalid choice."
     exit 1
